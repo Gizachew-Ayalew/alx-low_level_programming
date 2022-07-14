@@ -1,20 +1,21 @@
 #include "main.h"
 /**
-*_strcpy - See description
-* @dest: char type string
-* @src: char type string
-*desription: Copy the string pointed to by pointer `src` to
-* the buffer pointed to by `dest`
-* Return: Pointer to `dest`
+*_strcat - appends strings
+*@dest: destination
+*@src: source
+*Return: dest
 */
-char *_strcpy(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
-int i;
-for (i = 0; src[i] != '\0'; i++)
+int i = 0;
+int j = 0;
+while (dest[i] != '\0')
 {
-dest[i] = src[i];
+i++;
 }
-dest[i] = '\0';
+for (j = 0; src[j] != '\0'; j++)
+{
+dest[i + j] = src[j];
+}
 return (dest);
 }
-
